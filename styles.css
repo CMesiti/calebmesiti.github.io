@@ -1,0 +1,392 @@
+/* =======================================
+   GLOBAL RESET & BASE STYLES
+======================================= */
+/*margin, border, padding,content */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Arial", Helvetica, sans-serif;
+  background-color: #f4f6fb;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+/* =======================================
+   HEADER / BANNER
+======================================= */
+.main-header {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  background: url("images/WebpageBanner.png") no-repeat center center/cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.main-header .overlay {
+  background: rgba(0, 0, 0, 0.45);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-content {
+  text-align: center;
+  color: #fff;
+}
+
+.site-title {
+  font-weight: 800px;
+  /* font-size: 3em; */
+  font-size: 8rem;
+  margin-bottom: 20px;
+  letter-spacing: 1.5px;
+  background-image: url(images/text-background.jpg);
+  text-transform:uppercase;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color:transparent;
+}
+
+/* ===== Navigation ===== */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1em;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 18px;
+  border-radius: 8px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav a.current{
+  background: rgb(0, 120, 255);
+  color: #000;
+}
+
+nav a:hover {
+  transform: translateY(-3px);
+  background: rgb(0, 120, 255);
+  color: #000;
+}
+
+/* =======================================
+   MAIN CONTENT
+======================================= */
+main {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.intro h2 {
+  font-size: 2em;
+  color: #004aad;
+  margin-bottom: 10px;
+}
+
+/* ===== About Section ===== */
+.about h2 {
+  color: #004aad;
+  margin-bottom: 15px;
+  border-bottom: 3px solid #0078ff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.about ol {
+  list-style-type: none;
+  padding: 0;
+  margin: 1rem 0;
+  border-left: 4px solid #3498db;
+}
+.about li{
+  background: #f8f9fa;
+  font-weight: bold;
+  margin: 0.4rem 0;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.about li strong{
+  color: #2c3e50;
+}
+
+
+/* =======================================
+   CONTACT PAGE
+======================================= */
+.contact-section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  background-color: #f4f6fb;
+  padding: 60px 20px;
+}
+
+/* Main card container */
+.contact-container {
+  background: #ffffff;
+  padding: 40px 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 480px; /* Perfect readable width */
+}
+
+/* Header */
+.contact-container h2 {
+  color: #004aad;
+  margin-bottom: 25px;
+  text-align: center;
+  border-bottom: 3px solid #0078ff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Form layout */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Labels */
+.contact-form label {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Inputs & textareas */
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1em;
+  width: 100%;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #0078ff;
+  box-shadow: 0 0 5px rgba(0, 120, 255, 0.3);
+}
+
+/* Submit button */
+.submit-btn {
+  background-color: #004aad;
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0078ff;
+  transform: scale(1.03);
+}
+
+
+/* =======================================
+   RESUME PAGE
+======================================= */
+.resume {
+  padding: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.resume h1.name {
+  font-size: 2.2rem;
+  color: #0e6e55;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.resume h2 {
+  color: #0e6e55;
+  border-bottom: 2px solid #a16f0b;
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+
+.resume .right {
+  float: right;
+  color: #555;
+  font-style: italic;
+}
+
+.resume ul {
+  margin-top: 4px;
+  margin-bottom: 12px;
+}
+
+.resume a {
+  color: #0e6e55;
+  text-decoration: none;
+}
+
+/* =======================================
+   FOOTER
+======================================= */
+footer {
+  text-align: center;
+  background-color: #004aad;
+  color: #fff;
+  padding: 20px 0;
+  margin-top: auto;
+  font-size: 0.95em;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.2);
+}
+
+footer a {
+  color: #f9fafa;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* =======================================
+   WORK PAGE STYLING
+======================================= */
+.work-section {
+  width: 100%;
+  min-height: 100vh;
+  background: #f5f8ff;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.work-section section {
+  max-width: 900px;
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.work-section h2 {
+  color: #004aad;
+  text-align: center;
+  border-bottom: 3px solid #0078ff;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 25px;
+}
+
+.work-section p {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #444;
+}
+
+.work-samples {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.sample {
+  background: #f9faff;
+  padding: 25px;
+  border-radius: 8px;
+  border-left: 5px solid #004aad;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.sample:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(1, 90, 192, 0.726);
+}
+
+.sample h3 {
+  color: #004aad;
+  margin-bottom: 10px;
+}
+
+.sample p {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.sample a {
+  color: #0078ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sample a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* =======================================
+   RESPONSIVE DESIGN
+======================================= */
+@media (max-width: 768px) {
+  .site-title {
+    font-size: 2.2em;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  main {
+    margin: 20px auto;
+  }
+
+  .contact-section {
+    padding: 20px;
+  }
+  /* Mobile responsive */
+  .contact-container {
+    padding: 25px;
+    max-width: 90%;
+  }
+  .work-section section {
+  padding: 25px;
+  }
+  .sample {
+    padding: 20px;
+  }
+}
