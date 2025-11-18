@@ -17,6 +17,7 @@ body {
   line-height: 1.6;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 /* =======================================
@@ -90,9 +91,10 @@ nav a:hover {
    MAIN CONTENT
 ======================================= */
 main {
-  max-width: 1000px;
+  max-width: none;
   margin: 40px auto;
   padding: 0 20px;
+  font-family:  "Arial", Helvetica, sans-serif;
 }
 
 .intro {
@@ -107,31 +109,68 @@ main {
 }
 
 /* ===== About Section ===== */
-.about h2 {
-  color: #004aad;
-  margin-bottom: 15px;
-  border-bottom: 3px solid #0078ff;
-  display: inline-block;
-  padding-bottom: 5px;
+h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 35px;
+  color: #1a1a1a;
+  font-weight: 800;
+  letter-spacing: 0.6px;
 }
 
+/* Row container */
+.row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 0 5%;
+  margin-bottom: 40px;
+}
+
+/* Larger Cards */
+.about {
+  width: 33.5%;             /* wider cards */
+  background: #ffffff;
+  padding: 35px 32px;        /* more padding for bigger feel */
+  border-radius: 16px;
+
+  /* deeper shadow for presence */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  border: 1px solid #ddd;
+
+  min-height: 230px;         /* makes them visibly larger */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* centers text vertically */
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* hover effect */
+.about:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* List formatting */
 .about ol {
-  list-style-type: none;
-  padding: 0;
-  margin: 1rem 0;
-  border-left: 4px solid #3498db;
-}
-.about li{
-  background: #f8f9fa;
-  font-weight: bold;
-  margin: 0.4rem 0;
-  padding: 0.6rem 1rem;
-  border-radius: 6px;
-  transition: background 0.2s;
+  padding-left: 25px;
+  line-height: 1.7;
+  color: #222;
+  font-size: 1.18rem;     /* increased */
+  font-weight: 500;
 }
 
-.about li strong{
-  color: #2c3e50;
+/* Marker styling */
+.about ol li::marker {
+  color: #0077ff;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.about li {
+  margin-bottom: 16px;
 }
 
 
@@ -388,5 +427,12 @@ footer a:hover {
   }
   .sample {
     padding: 20px;
+  }
+  .row {
+  flex-direction: column;
+  }
+
+  .about {
+    min-height: auto;
   }
 }
